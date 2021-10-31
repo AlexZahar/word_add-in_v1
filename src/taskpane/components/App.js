@@ -50,10 +50,10 @@ export default class App extends React.Component {
        */
 
       // insert a paragraph at the end of the document.
-      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.start);
+      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.end);
 
       // change the paragraph color to blue.
-      paragraph.font.color = "blue";
+      paragraph.font.color = "red";
 
       await context.sync();
     });
