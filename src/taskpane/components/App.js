@@ -4,7 +4,7 @@ import { DefaultButton } from "@fluentui/react";
 import Header from "./Header";
 import HeroList from "./HeroList";
 import Progress from "./Progress";
-
+import Sbx from "./Sbx/Sbx";
 // images references in the manifest
 /* eslint-disable no-unused-vars */
 import icon16 from "../../../assets/icon-16.png";
@@ -50,7 +50,7 @@ export default class App extends React.Component {
        */
 
       // insert a paragraph at the end of the document.
-      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.end);
+      const paragraph = context.document.body.insertParagraph("Hello World", Word.InsertLocation.start);
 
       // change the paragraph color to blue.
       paragraph.font.color = "blue";
@@ -75,6 +75,7 @@ export default class App extends React.Component {
     return (
       <div className="ms-welcome">
         <Header logo={require("./../../../assets/logo-filled.png")} title={this.props.title} message="Welcome" />
+        <Sbx></Sbx>
         <HeroList message="Discover what Office Add-ins can do for you today!" items={this.state.listItems}>
           <p className="ms-font-l">
             Modify the source files, then click <b>Run</b>.
